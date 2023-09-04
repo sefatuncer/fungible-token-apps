@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "onApprovalReceived",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface for any contract that wants to support `approveAndCall`  from ERC1363 token contracts.",
+			"kind": "dev",
+			"methods": {
+				"onApprovalReceived(address,uint256,bytes)": {
+					"details": "Any ERC1363 smart contract calls this function on the recipient after an `approve`. This function MAY throw to revert and reject the approval. Return of other than the magic value MUST result in the transaction being reverted. Note: the token contract address is always the message sender.",
+					"params": {
+						"amount": "uint256 The amount of tokens to be spent",
+						"data": "bytes Additional data with no specified format",
+						"sender": "address The address which called `approveAndCall` function"
+					},
+					"returns": {
+						"_0": "`bytes4(keccak256(\"onApprovalReceived(address,uint256,bytes)\"))` unless throwing"
+					}
+				}
+			},
+			"title": "ERC1363Spender interface",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"onApprovalReceived(address,uint256,bytes)": {
+					"notice": "Handle the approval of ERC1363 tokens."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IERC1363Spender.sol": "IERC1363Spender"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IERC1363Spender.sol": {
+			"keccak256": "0x658c0f04a96a6730fed0c94a29a8205d3198f07d02dfb0f8ee22527c1f1ca78e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://18d44b9b350b8b2737af168f9405e597ac6707ceeec667ada699d3939a7c649c",
+				"dweb:/ipfs/Qmajo3GnJ6RgcDgYBx3UcYWMsoFcQCHf8eRiyXHHX2bacg"
+			]
+		}
+	},
+	"version": 1
+}

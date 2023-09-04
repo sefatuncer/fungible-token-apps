@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "onTransferReceived",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface for any contract that wants to support `transferAndCall` or `transferFromAndCall`  from ERC1363 token contracts.",
+			"kind": "dev",
+			"methods": {
+				"onTransferReceived(address,address,uint256,bytes)": {
+					"details": "Any ERC1363 smart contract calls this function on the recipient after a `transfer` or a `transferFrom`. This function MAY throw to revert and reject the transfer. Return of other than the magic value MUST result in the transaction being reverted. Note: the token contract address is always the message sender.",
+					"params": {
+						"amount": "uint256 The amount of tokens transferred",
+						"data": "bytes Additional data with no specified format",
+						"sender": "address The address which are token transferred from",
+						"spender": "address The address which called `transferAndCall` or `transferFromAndCall` function"
+					},
+					"returns": {
+						"_0": "`bytes4(keccak256(\"onTransferReceived(address,address,uint256,bytes)\"))` unless throwing"
+					}
+				}
+			},
+			"title": "IERC1363Receiver interface",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"onTransferReceived(address,address,uint256,bytes)": {
+					"notice": "Handle the receipt of ERC1363 tokens."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IERC1363Receiver.sol": "IERC1363Receiver"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IERC1363Receiver.sol": {
+			"keccak256": "0xca0dfafb99619afc898862cb8d92ccf9026deb6ddc2951f6f4110f59d03ad087",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0466d5ae40a61a0dfce81caf7e294921dacf470e014462ffcaf18f1e4021465",
+				"dweb:/ipfs/QmfMzueVhFnBfU7gm4vJ5dL63NmN9uLcCvd9xeKWy2UxzQ"
+			]
+		}
+	},
+	"version": 1
+}
